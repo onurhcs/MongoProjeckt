@@ -1,0 +1,24 @@
+﻿@model MyMongoProjecktNight.Dtos.CustomerDtos.CreateCustomerDto
+
+@{
+    Layout = null;
+}
+
+<link href="~/lib/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet" />
+
+<div class="container">
+    <br /><br />
+    <form method="post">
+        <div class="form-group">
+            <label for="CustomerName">Müşteri Adı</label>
+            <input type="text" asp-for="CustomerName" class="form-control" id="CustomerName" />
+        </div>
+        <br />
+        <div class="form-group">
+            <label for="CustomerSurname">Müşteri Soyadı</label>
+            <input type="text" asp-for="CustomerSurname" class="form-control" id="CustomerSurname" />
+        </div>
+        <br />
+        <button type="submit" class="btn btn-info">Müşteriyi Ekle</button>
+    </form>
+</div>

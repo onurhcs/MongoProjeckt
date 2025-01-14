@@ -1,0 +1,28 @@
+﻿@model MyMongoProjecktNight.Dtos.CustomerDtos.UpdateCustomerDto
+
+@{
+    Layout = null;
+}
+
+<link href="~/lib/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet" />
+
+<div class="container">
+    <h2 class="mt-4">Müşteri Güncelle</h2>
+    <form asp-action="UpdateCustomer" method="post">
+        <input type="hidden" asp-for="CustomerId" />
+
+        <div class="form-group">
+            <label for="Name">Ad</label>
+            <input type="text" asp-for="CustomerName" class="form-control" id="Name" />
+        </div>
+        <br />
+        <div class="form-group">
+            <label for="Surname">Soyad</label>
+            <input type="text" asp-for="CustomerSurname" class="form-control" id="Surname" />
+        </div>
+        <br />
+        <button type="submit" class="btn btn-primary">Kaydet</button>
+        <a asp-action="CustomerList" class="btn btn-secondary">İptal</a>
+    </form>
+</div>
+
