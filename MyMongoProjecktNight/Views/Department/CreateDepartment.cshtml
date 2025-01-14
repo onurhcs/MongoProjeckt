@@ -10,19 +10,49 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Departman Oluştur</title>
     <link href="~/lib/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <style>
+        body {
+            background-color: #f8f9fa;
+            font-family: Arial, sans-serif;
+        }
+
+        .container {
+            max-width: 500px;
+            background: #fff;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        h2 {
+            text-align: center;
+            margin-bottom: 20px;
+            color: #343a40;
+        }
+
+        .btn-primary {
+            background-color: #007bff;
+            border: none;
+        }
+
+            .btn-primary:hover {
+                background-color: #0056b3;
+            }
+    </style>
 </head>
 <body>
     <div class="container mt-5">
         <h2>Yeni Departman Oluştur</h2>
         <form asp-action="CreateDepartment" method="post">
             <div class="form-group">
-                <label for="Name">Departman Adı</label>
+                <label for="Name" class="form-label">Departman Adı</label>
                 <input type="text" asp-for="DepartmentName" class="form-control" id="Name" placeholder="Departman adı giriniz" />
                 <span asp-validation-for="DepartmentName" class="text-danger"></span>
             </div>
-            <br />
-            <button type="submit" class="btn btn-primary">Kaydet</button>
-            <a asp-action="DepartmentList" class="btn btn-secondary">İptal</a>
+            <div class="d-flex justify-content-between mt-4">
+                <button type="submit" class="btn btn-primary w-45">Kaydet</button>
+                <a asp-action="DepartmentList" class="btn btn-secondary w-45">İptal</a>
+            </div>
         </form>
     </div>
 

@@ -1,0 +1,34 @@
+﻿@model MyMongoProjecktNight.Dtos.DepartmentDtos.UpdateDepartmentDto
+
+@{
+    Layout = null;
+}
+
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Departman Güncelle</title>
+    <link href="~/lib/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet" />
+</head>
+<body>
+    <div class="container mt-5">
+        <h2>Departman Güncelle</h2>
+        <form asp-action="UpdateDepartment" method="post">
+            <input type="hidden" asp-for="DepartmentId" />
+            <div class="form-group">
+                <label for="Name">Departman Adı</label>
+                <input type="text" asp-for="DepartmentName" class="form-control" id="Name" placeholder="Departman adı giriniz" />
+                <span asp-validation-for="DepartmentName" class="text-danger"></span>
+            </div>
+            <br />
+            <button type="submit" class="btn btn-primary">Kaydet</button>
+            <a asp-action="DepartmentList" class="btn btn-secondary">İptal</a>
+        </form>
+    </div>
+
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
